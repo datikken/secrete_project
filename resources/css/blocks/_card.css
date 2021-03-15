@@ -1,0 +1,22 @@
+.uk-card {
+    padding: 20px;
+    align-items: flex-start;
+}
+.uk-card-title {
+    color: black!important;
+}
+.uk-card-book {
+    height: 360px;
+}
+.uk-card-title, .uk-card-author {
+    font-size: 20px;
+    margin: 0 0 5px 0;
+}
+@media screen and (min-width: 1000px){
+    .uk-card-image {
+        max-height: 207px;
+    }
+}
+.uk-card-body {
+    padding: 20px 0 0 0;
+}

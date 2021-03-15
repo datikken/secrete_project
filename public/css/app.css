@@ -1,0 +1,697 @@
+html {
+    background:#eef0f1;
+    font-family: 'Montserrat'!important;
+}
+.uk-container {
+    position: relative;
+}
+.tm-sidebar-left, .tm-sidebar-right {
+    width: 280px;
+    min-width: 280px;
+}
+.tm-sidebar-left {
+    margin-right: 20px;
+}
+
+.tm-main {
+    /*margin: 0 20px;*/
+    /*max-width: 600px;*/
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("/fonts/Montserrat-Regular.ttf");
+}
+@font-face {
+    font-family: "MontserratMedium";
+    src: url("/fonts/Montserrat-Medium.ttf");
+}
+@font-face {
+    font-family: "MontserratSemiBold";
+    src: url("/fonts/Montserrat-semibold.ttf");
+}
+
+.gradient-purple {
+    background: linear-gradient(to right, rgb(192, 108, 233), rgb(103, 59, 179));
+}
+.color-danger {
+    color: red;
+}
+
+.turbolinks-progress-bar {
+    height: 5px;
+    background: linear-gradient(to right, rgb(192, 108, 233), rgb(103, 59, 179));
+}
+
+.uk-card {
+    padding: 20px;
+    align-items: flex-start;
+}
+.uk-card-title {
+    color: black!important;
+}
+.uk-card-book {
+    height: 360px;
+}
+.uk-card-title, .uk-card-author {
+    font-size: 20px;
+    margin: 0 0 5px 0;
+}
+@media screen and (min-width: 1000px){
+    .uk-card-image {
+        max-height: 207px;
+    }
+}
+.uk-card-body {
+    padding: 20px 0 0 0;
+}
+
+.article_listItem {
+    position: relative;
+}
+.article_listItem_link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: black;
+}
+.article_listItem_userInfo {
+    margin-bottom: 10px;
+}
+.article_listItem_user {
+    margin: 0 30px 0 0;
+}
+.article_listItem_user_avatar {
+    /*border-radius: 50%;*/
+    /*max-width: 40px;*/
+    /*max-height: 40px;*/
+}
+
+.navbar {
+    background: #fff;
+    font-family: 'Montserrat';
+    margin: 0 0 20px 0;
+}
+.navbar_fixed {
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+    margin: 0;
+}
+.navbar-link {
+    text-decoration: none;
+    padding-right:0;
+}
+.navbar-link:hover {
+    text-decoration: none;
+}
+.navbar_list_item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.navbar_list_item:last-child {
+    /*margin-left: 1rem;*/
+}
+.navbar_logo {
+    padding:5px 0 5px 0;
+    font-size: 36px;
+    margin: 0;
+    text-decoration: none;
+    font-family: "MontserratSemiBold";
+}
+
+.navbar_list_item form a, .uk-navbar-nav li a {
+    color: #999;
+    transition: .1s ease-in-out;
+    transition-property: color,background-color;
+    font-size: 16px;
+    text-transform: initial;
+    text-decoration: none;
+    min-height: unset;
+}
+.navbar_list_item form a:hover,
+.uk-navbar-nav li a:hover {
+    color: initial;
+}
+.uk-navbar-left .navbar-link {
+    display: flex;
+    align-items: center;
+}
+.uk-navbar-left .navbar-link img {
+    max-height: 35px;
+    margin-left: 10px;
+}
+@media screen and (min-width: 1000px){
+    .uk-navbar-left .navbar-link img {
+        max-height: 57px;
+        margin-left: 0px;
+    }
+}
+
+
+
+.slider_link {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 999999;
+    cursor: pointer;
+}
+
+.slider_image {
+    height: 148px;
+    width: 148px;
+    -o-object-fit: cover;
+       object-fit: cover;
+}
+
+.m0 {
+    margin: 0;
+}
+.mt0 {
+    margin-top:0;
+}
+.mr5 {
+    margin-right: 5px;
+}
+.mr15 {
+    margin-right: 15px;
+}
+.mb20 {
+    margin-bottom: 20px;
+}
+
+.pr0 {
+    padding-right:0;
+}
+.pt10 {
+    padding-top: 10px;
+}
+.pl10 {
+    padding-left: 10px;
+}
+
+.uk-shadow {
+    box-shadow: 0 5px 12px rgb(0 0 0 / 15%);
+}
+
+.bg-white {
+    background: #fff;
+}
+
+.game_1_frame {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    width: 660px;
+    height: 520px;
+    margin: auto;
+    background-color: #21d4fd;
+    border-radius: 30% 70% 70% 30%/30% 30% 70% 70%;
+    box-shadow: 15px 15px 50px rgba(0,0,0,0.2);
+    -webkit-animation: morphing 10s infinite;
+            animation: morphing 10s infinite;
+    overflow: hidden;
+}
+.game_1_frame:hover {
+    /*animation-play-state: paused;*/
+}
+.game_1_scoreboard {
+    position: absolute;
+    top: 0px;
+    left: 40px;
+}
+@-webkit-keyframes morphing {
+    0% {
+        border-radius: 30% 70% 70% 30%/30% 30% 70% 70%;
+        box-shadow: 15px 15px 50px rgba(0,0,0,0.2);
+    }
+    25% {
+        border-radius: 58% 42% 75% 25%/76% 46% 54% 24%;
+    }
+    50% {
+        border-radius: 50% 50% 33% 67%/55% 27% 73% 45%;
+        box-shadow: -10px -5px 50px rgba(0,0,0,0.2);
+    }
+    75% {
+        border-radius: 33% 67% 58% 42%/63% 68% 32% 37%;
+    }
+}
+@keyframes morphing {
+    0% {
+        border-radius: 30% 70% 70% 30%/30% 30% 70% 70%;
+        box-shadow: 15px 15px 50px rgba(0,0,0,0.2);
+    }
+    25% {
+        border-radius: 58% 42% 75% 25%/76% 46% 54% 24%;
+    }
+    50% {
+        border-radius: 50% 50% 33% 67%/55% 27% 73% 45%;
+        box-shadow: -10px -5px 50px rgba(0,0,0,0.2);
+    }
+    75% {
+        border-radius: 33% 67% 58% 42%/63% 68% 32% 37%;
+    }
+}
+
+h4{
+	display: block;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	margin-top: 15px;
+	padding:0 40px 10px 15px;
+}
+
+.busy{
+	height: 100px;
+	width: 100px;
+	/*background:url(../images/busy.gif) no-repeat;*/
+}
+
+nav ul {
+	list-style-type: none;
+	font-size: 14px;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #333333;
+}
+
+nav li {
+	float: left;
+}
+
+nav li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px;
+	text-decoration: none;
+}
+
+nav li a:hover {
+	background-color: #111111;
+}
+
+canvas{
+	/*background: url(../images/canvas_bg.png)*/
+}
+
+#hierarchy{
+	width: 100%;
+}
+
+#timeline{
+	width: 100%;
+	height: 260px;
+}
+
+#preview{
+	/*background: url(../images/canvas_bg.png);*/
+	margin: 0;
+	padding: 0;
+}
+
+.spri_section_name{
+	background: #333;
+	color: #fff;
+	margin-left: 15px;
+	padding-left: 15px;
+}
+
+.nopadding{
+	padding: 0;
+}
+
+.column {
+    float: left;
+    padding: 0;
+}
+
+.left {
+  width: 30%;
+}
+
+.right {
+  width: 70%;
+	margin-bottom: -5px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+nav{
+	background: #333;
+	margin-bottom: 0;
+	height: 50px;
+	width: 100%;
+}
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow-y: hidden; /* no scroll */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-flex{
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #D3D2D2;
+    margin: 100px auto;
+    padding: 0 20px 20px 20px;
+    border: 1px solid #888;
+    width: 50%; /* Could be more or less, depending on screen size */
+}
+
+.projects {
+    width: 80%; /* Could be more or less, depending on screen size */
+	height: 80%;
+}
+
+.project-cell{
+	display:inline-block;
+	border:#FFFFFF solid thick;
+	width:160px;
+	height:100px;
+	margin:5px;
+}
+
+/*.project-cell a:hover{
+	border: #E0E805 solid thick;
+}*/
+
+.project-cell img{
+	margin-top: -20px;
+}
+
+.closebtn{
+	display:flex;
+	align-content: center;
+	justify-content: center;
+	/*margin-right: -4px;
+	margin-top: -4px;*/
+	font-size: 16px;
+	font-weight: bold;
+	color:#00C6B5;
+	background: #fff;
+	width: 20px;
+	height:20px;
+	position:relative;
+	top: -4px;
+	left: 142px;
+	z-index: 10;
+	/* float:right;
+	clear:both; */
+}
+
+.deleteBtn{
+	background: #FF2349;
+	text-align: center;
+	border-radius: 5px;
+	color: #fff;
+}
+
+.closebtn a:hover{
+	background: #E0E805;
+}
+
+.dummybtn{
+	width: 20px;
+	height: 20px;
+	position:relative;
+	top: -4px;
+	left: 142px;
+}
+
+#myProjects, #exampleProjects{
+	min-height: 60px;
+	max-height: 250px;
+	overflow-y: scroll;
+	margin: 20px 0;
+}
+
+.modal-content h3{
+	background: #333;
+	padding: 6px 0 6px 20px;
+	margin-left: -20px;
+	margin-right: -20px;
+	margin-top: 0px;
+	color: #fff;
+}
+
+.modal-content input[type=text], .modal-content input[type=password], .modal-content input[type=email]{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+.modal-content textarea{
+	width: 100%;
+	height: 200px;
+	padding: 15px;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	resize: vertical;
+}
+
+.modal-content label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+.modal-content button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+/* The Close Button */
+.modal-content .close {
+	margin-top: -53px;
+	margin-right: -10px;
+    color: #fff;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.modal-content .close:hover,
+.modal-content .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+
+#images ul{
+	margin-top: 5px;
+}
+
+.plist li a:hover{
+	color: #689C52;
+}
+
+.plist li.active a{
+	background:#689C52;
+	color: #fff;
+}
+
+.plist li{
+	list-style-type: none;
+	margin:0 0 0 -25px;
+	padding:0;
+}
+
+#images button, #sprites button, #actions button, #nodes button{
+	background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+	margin-top: 10px;
+	margin-right: 20px;
+	opacity: 0.5;
+}
+
+#mouseAction{
+	position:absolute;
+	top: 60px;
+	right: 10px;
+	color: #fff;
+}
+
+.animMode{
+	display: none;
+}
+
+#easingMenu{
+	display:none;
+	position:absolute;
+	width: 100px;
+	height: 20px;
+	background:#D9D9D9;
+}
+
+@media screen and (max-width: 910px) {
+	.column.left nav ul{
+		font-size: 12px;
+	}
+
+	.column.left nav li a {
+		padding: 10px;
+	}
+}
+
+.progress{
+	display:none;
+	width:50%;
+	height:10px;
+	border-radius:5px;
+	background: #E9E9E9;
+}
+
+.done{
+	height:10px;
+	border-radius:5px;
+	background:#71B969;
+}
+
+#mouseAction a{
+	background: #5A9050;
+	border-radius: 5px;
+	padding: 6px;
+	margin-right: 8px;
+}
+
+#mouseAction a:hover{
+	background:#68C704;
+}
+
+
+@media screen and (min-width: 1200px) {
+    .chess_board {
+        display: flex;
+    }
+}
+
+.board {
+    width: 400px;
+    margin: auto
+}
+
+.info {
+    width: 400px;
+    margin: auto;
+}
+
+.move-history {
+    max-height: 100px;
+    overflow-y: scroll;
+}
+
+/* clearfix */
+.clearfix-7da63 {
+    clear: both;
+}
+
+/* board */
+.board-b72b1 {
+    border: 2px solid #404040;
+    box-sizing: content-box;
+}
+
+/* square */
+.square-55d63 {
+    float: left;
+    position: relative;
+
+    /* disable any native browser highlighting */
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* white square */
+.white-1e1d7 {
+    background-color: #f0d9b5;
+    color: #b58863;
+}
+
+/* black square */
+.black-3c85d {
+    background-color: #b58863;
+    color: #f0d9b5;
+}
+
+/* highlighted square */
+.highlight1-32417, .highlight2-9c5d2 {
+    box-shadow: inset 0 0 3px 3px yellow;
+}
+
+/* notation */
+.notation-322f9 {
+    cursor: default;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    position: absolute;
+}
+.alpha-d2270 {
+    bottom: 1px;
+    right: 3px;
+}
+.numeric-fc462 {
+    top: 2px;
+    left: 2px;
+}
+
+
+

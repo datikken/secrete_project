@@ -1,0 +1,63 @@
+.navbar {
+    background: #fff;
+    font-family: 'Montserrat';
+    margin: 0 0 20px 0;
+}
+.navbar_fixed {
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+    margin: 0;
+}
+.navbar-link {
+    text-decoration: none;
+    padding-right:0;
+}
+.navbar-link:hover {
+    text-decoration: none;
+}
+.navbar_list_item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.navbar_list_item:last-child {
+    /*margin-left: 1rem;*/
+}
+.navbar_logo {
+    padding:5px 0 5px 0;
+    font-size: 36px;
+    margin: 0;
+    text-decoration: none;
+    font-family: "MontserratSemiBold";
+}
+
+.navbar_list_item form a, .uk-navbar-nav li a {
+    color: #999;
+    transition: .1s ease-in-out;
+    transition-property: color,background-color;
+    font-size: 16px;
+    text-transform: initial;
+    text-decoration: none;
+    min-height: unset;
+}
+.navbar_list_item form a:hover,
+.uk-navbar-nav li a:hover {
+    color: initial;
+}
+.uk-navbar-left .navbar-link {
+    display: flex;
+    align-items: center;
+}
+.uk-navbar-left .navbar-link img {
+    max-height: 35px;
+    margin-left: 10px;
+}
+@media screen and (min-width: 1000px){
+    .uk-navbar-left .navbar-link img {
+        max-height: 57px;
+        margin-left: 0px;
+    }
+}
+

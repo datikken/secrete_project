@@ -1,0 +1,6 @@
+.gradient-purple {
+    background: linear-gradient(to right, rgb(192, 108, 233), rgb(103, 59, 179));
+}
+.color-danger {
+    color: red;
+}

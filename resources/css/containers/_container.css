@@ -1,0 +1,19 @@
+html {
+    background:#eef0f1;
+    font-family: 'Montserrat'!important;
+}
+.uk-container {
+    position: relative;
+}
+.tm-sidebar-left, .tm-sidebar-right {
+    width: 280px;
+    min-width: 280px;
+}
+.tm-sidebar-left {
+    margin-right: 20px;
+}
+
+.tm-main {
+    /*margin: 0 20px;*/
+    /*max-width: 600px;*/
+}

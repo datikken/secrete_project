@@ -1,0 +1,23 @@
+.article_listItem {
+    position: relative;
+}
+.article_listItem_link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: black;
+}
+.article_listItem_userInfo {
+    margin-bottom: 10px;
+}
+.article_listItem_user {
+    margin: 0 30px 0 0;
+}
+.article_listItem_user_avatar {
+    /*border-radius: 50%;*/
+    /*max-width: 40px;*/
+    /*max-height: 40px;*/
+}

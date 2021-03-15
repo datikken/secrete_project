@@ -1,0 +1,100 @@
+name: CI
+on: [ push ]
+
+jobs:
+  tests:
+    runs-on: ${{ matrix.os}}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ ubuntu-latest ]
+        php: [ 7.4 ]
+        dependency-version: [ prefer-stable ]
+
+    name: php${{ matrix.php }} - ${{ matrix.dependency-version }} - ${{ matrix.os }}
+
+    services:
+      mysql:
+        image: mysql:5.7
+        env:
+          MYSQL_ALLOW_EMPTY_PASSWORD: yes
+          MYSQL_DATABASE: ${{ secrets.DATABASE }}
+          MYSQL_USER: ${{ secrets.MYSQLUSER }}
+          MYSQL_PASSWORD: ${{ secrets.MYSQLPASSWORD }}
+        ports:
+          - 33306:3306
+        options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
+
+      # in case you want to use postgres, uncomment below
+      # postgres:
+      #   image: postgres:10.8
+      #   env:
+      #     POSTGRES_USER: postgres
+      #     POSTGRES_PASSWORD: postgres
+      #     POSTGRES_DB: test
+      #   ports:
+      #   - 5432:5432
+      #   options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
+
+    steps:
+      - name: Verify MySQL connection
+        run: |
+          mysql --version
+          sudo apt-get install -y mysql-client
+          mysql --host 127.0.0.1 --port ${{ job.services.mysql.ports['3306'] }} -uroot -e "SHOW DATABASES"
+
+      - name: Checkout code
+        uses: actions/checkout@v1
+
+      - name: Cache dependencies
+        uses: actions/cache@v1
+        with:
+          path: ~/.composer/cache/files
+          key: dependencies-composer-${{ hashFiles('composer.json') }}
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          extensions: dom, curl, libxml, mbstring, zip, pcntl, pdo, sqlite, pdo_sqlite, bcmath, soap, intl, gd, exif, iconv, imagick
+          coverage: none
+
+      - name: Install Composer dependencies
+        run: composer update --${{ matrix.dependency-version }} --prefer-dist --no-interaction --no-suggest
+
+      - name: Boot Laravel application
+        run: |
+          cp .env.example .env
+          php artisan key:generate
+          php artisan --version
+
+      - name: Run migration and schema dump
+        run: |
+          php artisan migrate
+        env:
+          DB_HOST: 127.0.0.1
+          DB_PORT: ${{ job.services.mysql.ports[3306] }}
+
+      - name: Install NPM dependencies
+        run: npm install
+
+      - name: Compile assets
+        run:
+          npm audit fix
+          npm run production
+
+      - name: Execute tests
+        run: vendor/bin/phpunit --verbose
+        env:
+          DB_PORT: ${{ job.services.mysql.ports[3306] }}
+
+      - name: execute ssh
+        uses: garygrossgarten/github-action-ssh@release
+        with:
+          command:
+            cd jsux.fun;
+            git pull;
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          port: ${{ secrets.PORT }}

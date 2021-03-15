@@ -1,0 +1,13 @@
+.slider_link {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 999999;
+    cursor: pointer;
+}
+
+.slider_image {
+    height: 148px;
+    width: 148px;
+    object-fit: cover;
+}

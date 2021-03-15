@@ -1,0 +1,84 @@
+**************************************
+*     Application In Production!     *
+**************************************
+
+ Do you really wish to run this command? (yes/no) [no]:
+ > Command Canceled!
+**************************************
+*     Application In Production!     *
+**************************************
+
+ Do you really wish to run this command? (yes/no) [no]:
+ > Command Canceled!
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) (SQL: select * from information_schema.tables where table_schema = laravel and table_name = migrations and table_type = 'BASE TABLE')
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connection.php:678
+    674▕         // If an exception occurs when attempting to run a query, we'll format the error
+    675▕         // message to include the bindings with SQL, which will make this exception a
+    676▕         // lot more helpful to the developer instead of just the database's errors.
+    677▕         catch (Exception $e) {
+  ➜ 678▕             throw new QueryException(
+    679▕                 $query, $this->prepareBindings($bindings), $e
+    680▕             );
+    681▕         }
+    682▕
+
+      [2m+36 vendor frames [22m
+  37  artisan:37
+      Illuminate\Foundation\Console\Kernel::handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) (SQL: select * from information_schema.tables where table_schema = laravel and table_name = migrations and table_type = 'BASE TABLE')
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connection.php:678
+    674▕         // If an exception occurs when attempting to run a query, we'll format the error
+    675▕         // message to include the bindings with SQL, which will make this exception a
+    676▕         // lot more helpful to the developer instead of just the database's errors.
+    677▕         catch (Exception $e) {
+  ➜ 678▕             throw new QueryException(
+    679▕                 $query, $this->prepareBindings($bindings), $e
+    680▕             );
+    681▕         }
+    682▕
+
+      [2m+36 vendor frames [22m
+  37  artisan:37
+      Illuminate\Foundation\Console\Kernel::handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) (SQL: select * from information_schema.tables where table_schema = laravel and table_name = migrations and table_type = 'BASE TABLE')
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connection.php:678
+    674▕         // If an exception occurs when attempting to run a query, we'll format the error
+    675▕         // message to include the bindings with SQL, which will make this exception a
+    676▕         // lot more helpful to the developer instead of just the database's errors.
+    677▕         catch (Exception $e) {
+  ➜ 678▕             throw new QueryException(
+    679▕                 $query, $this->prepareBindings($bindings), $e
+    680▕             );
+    681▕         }
+    682▕
+
+      [2m+36 vendor frames [22m
+  37  artisan:37
+      Illuminate\Foundation\Console\Kernel::handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+Nothing to migrate.
+Nothing to migrate.
+Nothing to migrate.
+Nothing to migrate.
+Nothing to migrate.
+Nothing to migrate.
+Nothing to migrate.
+Nothing to migrate.
+Nothing to migrate.
+Nothing to migrate.
+Nothing to migrate.
+Nothing to migrate.
+Nothing to migrate.
+Nothing to migrate.
+Nothing to migrate.
